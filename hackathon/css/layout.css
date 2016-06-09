@@ -220,3 +220,8 @@
         color: black;
         font-weight: bold;
     }
+
+    .landing-btn {
+        margin-top: 19px;
+        margin-left: 1100px;
+    }

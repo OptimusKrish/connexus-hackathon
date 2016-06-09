@@ -1,0 +1,38 @@
+.username {
+    margin-top: 20px;
+    margin-left: 850px;
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.password {
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.signIn {
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.notify-logo {
+	background: url('../image/notification-logo.png') no-repeat;
+    height: 30px;
+    width: 30px;
+    float: right;
+    margin-right: 135px;
+    margin-top: 6px;
+}
+
+.notify-logo ul{
+	list-style: none;
+    margin-left: -97px;
+    margin-top: 42px;
+    border: 1px solid black;
+    width: 200px;
+    height: auto;
+}
+

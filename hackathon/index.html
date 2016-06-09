@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="hackathon">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <script src="vendors/angular.js"></script>
+    <script src="vendors/angular-route.min.js"></script>
+    <script src="vendors/angular-ui-router.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="controller/indexController.js"></script>
+</head>
+
+<body background="image/buzzImage.JPG" ng-controller="indexController">
+    <input type="text" ng-model="username" class="username" placeholder="username">
+    <input type="password" ng-model="password" name="password" class="password" placeholder="password">
+    <button type="submit" ng-click="login()" class="signIn">Sign In</button>
+    <div ui-view></div>
+</body>
+
+</html>

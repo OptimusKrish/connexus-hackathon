@@ -10,12 +10,12 @@
     <script src="vendors/angular-ui-router.min.js"></script>
     <script src="app/app.js"></script>
     <script src="controller/indexController.js"></script>
+    <script src="controller/landingController.js"></script>
+   
+
 </head>
 
-<body background="image/buzzImage.JPG" ng-controller="indexController">
-    <input type="text" ng-model="username" class="username" placeholder="username">
-    <input type="password" ng-model="password" name="password" class="password" placeholder="password">
-    <button type="submit" ng-click="login()" class="signIn">Sign In</button>
+<body>
     <div ui-view></div>
 </body>
 

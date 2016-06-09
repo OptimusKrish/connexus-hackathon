@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html ng-app="hackathon">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
-    <script src="../vendors/angular.js"></script>
-    <script src="../vendors/angular-route.min.js"></script>
-    <script src="../vendors/angular-ui-router.min.js"></script>
-    <script src="../app/app.js"></script>
-    <script src="../controller/indexController.js"></script>
-</head>
-<body background="../image/landingPage.JPG">
+<html>
+<div class="landing-img">
 <div class="notify-logo" ng-click="showNotification = !showNotification">
 <div ng-show="showNotification">
 <ul>
@@ -22,6 +10,8 @@
 </ul>
 </div>
 </div>
-</body>
+ <button ng-show="isTeacher" ng-click="createLog()">Create log</button>
+ <button type="submit" ng-click="logout()">Logout</button>
+</div>
 
 </html>

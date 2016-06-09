@@ -1,22 +1,5 @@
-<!DOCTYPE html>
-<html ng-app="hackathon">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.enscroll/0.6.0/enscroll.min.js"></script>
-    <script src="../vendors/angular.js"></script>
-    <script src="../vendors/angular-route.min.js"></script>
-    <script src="../vendors/angular-ui-router.min.js"></script>
-    <script src="../app/app.js"></script>
-    <script src="../controller/indexController.js"></script>
-  
-  <script>
+<html>
+ <script>
     $(document).ready(function () {
 
         // ANIMATEDLY DISPLAY THE NOTIFICATION COUNTER.
@@ -62,8 +45,8 @@
         });
     });
 </script>
-</head>
-<body background="../image/landingPage.JPG">
+<div class="landing-img">
+
   <div>
         <ul>
             <li id="noti_Container">
@@ -89,6 +72,8 @@
             </li>
         </ul>
     </div>
-</body>
-
+ <button ng-show="isTeacher" ng-click="createLog()">Create log</button>
+ <button type="submit" ng-click="logout()">Logout</button>
+</div>
+</div>
 </html>

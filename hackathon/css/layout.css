@@ -12,6 +12,16 @@
     border-radius: 10px;
 }
 
+.home-img{
+    background: url('../image/buzzImage.JPG') no-repeat;
+    height: 660px;
+}
+
+.landing-img{
+    background: url('../image/landingPage.JPG') no-repeat;
+    height: 660px;
+}
+
 .signIn {
     height: 30px;
     width: 80px;

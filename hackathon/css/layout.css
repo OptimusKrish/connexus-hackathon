@@ -23,8 +23,20 @@
     height: 30px;
     width: 30px;
     float: right;
-    margin-right: 135px;
-    margin-top: 6px;
+    margin-right: 150px;
+    margin-top: 10px;
+}
+
+.notify-drop-down {
+    float: right !important;
+    margin-top: 40px !important;
+    left: 100px !important;
+    position: relative !important;
+    background-color: #D3D3D3 !important;
+}
+
+.notify-count {
+    margin: -0.35rem 0px 0.71rem 1.07rem;
 }
 
 .notify-logo ul{
@@ -36,3 +48,165 @@
     height: auto;
 }
 
+
+
+
+ ul {
+        display:block;
+        list-style:none;
+        margin:0;
+        padding:12px 10px;
+        height:21px;
+    }
+    ul li {
+        float:left;
+        font:13px helvetica;
+        font-weight:bold;
+        margin:3px 0;
+    }
+    ul li a {
+        color:#FFF;
+        text-decoration:none;
+        padding:6px 15px;
+        cursor:pointer;
+    }
+    ul li a:hover {
+        background:#425B90;
+        text-decoration:none;
+        cursor:pointer;
+    }
+        
+    #noti_Container {
+        position:relative;
+        float: right;
+        margin-right: 145px;
+    }
+       
+    /* A CIRCLE LIKE BUTTON IN THE TOP MENU. */
+    #noti_Button {
+        width: 30px;
+        height: 30px;
+        background: url('../image/notification-logo.png') no-repeat;
+        line-height:22px;
+        border-radius:50%;
+        -moz-border-radius:50%; 
+        -webkit-border-radius:50%;
+        margin:-3px 14px 0 345px;
+        cursor:pointer;
+    }
+        
+    /* THE POPULAR RED NOTIFICATIONS COUNTER. */
+    #noti_Counter {
+        display:block;
+        position:relative;
+        background:#E1141E;
+        width: 15px;
+        color:#FFF;
+        font-size:12px;
+        font-weight:normal;
+        padding:1px 3px;
+        margin:-8px 0 0 365px;
+        border-radius:2px;
+        -moz-border-radius:2px; 
+        -webkit-border-radius:2px;
+        z-index:1;
+    }
+        
+    /* THE NOTIFICAIONS WINDOW. THIS REMAINS HIDDEN WHEN THE PAGE LOADS. */
+    #notifications {
+        display:none;
+        width:390px;
+        position:relative;
+        top:10px;
+        left:0;
+        background:#FFF;
+        border:solid 1px rgba(100, 100, 100, .20);
+        -webkit-box-shadow:0 3px 8px rgba(0, 0, 0, .20);
+        z-index: 0;
+    }
+    /* AN ARROW LIKE STRUCTURE JUST OVER THE NOTIFICATIONS WINDOW */
+    #notifications:before {         
+        content: '';
+        display:block;
+        width:0;
+        height:0;
+        color:transparent;
+        border:10px solid #CCC;
+        border-color:transparent transparent #FFF;
+        margin-top:-20px;
+        margin-left:350px;
+    }
+        
+    h3 {
+        display:block;
+        color:#333; 
+        background:#FFF;
+        font-weight:bold;
+        font-size:13px;    
+        padding:8px;
+        margin:0;
+        border-bottom:solid 1px rgba(100, 100, 100, .30);
+    }
+        
+    .seeAll {
+        background:#F6F7F8;
+        padding:8px;
+        font-size:12px;
+        font-weight:bold;
+        border-top:solid 1px rgba(100, 100, 100, .30);
+        text-align:center;
+    }
+    .seeAll a {
+        color:#3b5998;
+    }
+    .seeAll a:hover {
+        background:#F6F7F8;
+        color:#3b5998;
+        text-decoration:underline;
+    }
+
+    .notify-panel {
+        overflow: auto;
+        width: 400px;
+        height: 200px;
+        padding: 0 5px;
+    }
+
+    .track3 {
+        width: 10px;
+        background: rgba(0, 0, 0, 0);
+        margin-right: 2px;
+        border-radius: 10px;
+        -webkit-transition: background 250ms linear;
+        transition: background 250ms linear;
+    }
+
+    .track3:hover,
+    .track3.dragging {
+        background: #d9d9d9; /* Browsers without rgba support */
+        background: rgba(0, 0, 0, 0.15);
+    }
+
+    .handle3 {
+        width: 7px;
+        right: 0;
+        background: #999;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 7px;
+        -webkit-transition: width 250ms;
+        /*transition: width 250ms;*/
+    }
+
+    .track3:hover .handle3,
+    .track3.dragging .handle3 {
+        width: 10px;
+    }
+
+    .actor {
+        color: #3b5998;
+        font-weight: bold;
+    }
+    .verb {
+        color: black;
+        font-weight: bold;
+    }

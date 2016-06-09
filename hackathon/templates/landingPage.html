@@ -5,23 +5,90 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.enscroll/0.6.0/enscroll.min.js"></script>
     <script src="../vendors/angular.js"></script>
     <script src="../vendors/angular-route.min.js"></script>
     <script src="../vendors/angular-ui-router.min.js"></script>
     <script src="../app/app.js"></script>
     <script src="../controller/indexController.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+
+        // ANIMATEDLY DISPLAY THE NOTIFICATION COUNTER.
+        $('#noti_Counter')
+            .css({ opacity: 0 })
+            .text('7')              // ADD DYNAMIC VALUE (YOU CAN EXTRACT DATA FROM DATABASE OR XML).
+            .css({ top: '-10px' })
+            .animate({ top: '-2px', opacity: 1 }, 500);
+
+        $('#noti_Button').click(function () {
+
+            // TOGGLE (SHOW OR HIDE) NOTIFICATION WINDOW.
+            $('#notifications').fadeToggle('fast', 'linear', function () {
+                if ($('#notifications').is(':hidden')) {
+                    $('#noti_Button').css('background-color', '#2E467C');
+                }
+                else $('#noti_Button').css('background-color', '#FFF');
+            });
+
+           // $('#noti_Counter').fadeOut('slow');                 // HIDE THE COUNTER.
+
+            return false;
+        });
+
+        // HIDE NOTIFICATIONS WHEN CLICKED ANYWHERE ON THE PAGE.
+        $(document).click(function () {
+            $('#notifications').hide();
+
+            // CHECK IF NOTIFICATION COUNTER IS HIDDEN.
+            if ($('#noti_Counter').is(':hidden')) {
+                // CHANGE BACKGROUND COLOR OF THE BUTTON.
+                $('#noti_Button').css('background-color', '#2E467C');
+            }
+        });
+
+        $('#notifications').click(function () {
+            return false;       // DO NOTHING WHEN CONTAINER IS CLICKED.
+        });
+        $('.notify-panel').enscroll({
+            showOnHover: true,
+            verticalTrackClass: 'track3',
+            verticalHandleClass: 'handle3'
+        });
+    });
+</script>
 </head>
 <body background="../image/landingPage.JPG">
-<div class="notify-logo" ng-click="showNotification = !showNotification">
-<div ng-show="showNotification">
-<ul>
-	<li>Test notification1</li>
-	<li>Test notification2</li>
-	<li>Test notification3</li>
-	<li>Test notification4</li>
-</ul>
-</div>
-</div>
+  <div>
+        <ul>
+            <li id="noti_Container">
+                <div id="noti_Counter"></div>
+                <div id="noti_Button"></div>    
+                <div id="notifications">
+                    <h3>Notifications</h3>
+                    <div class="notify-panel">
+                      <span><p class="actor">Test1</p><p class="verb">Singned In</p></span>
+                      <span><p>Test notification2</p></span>
+                      <span><p>Test notification3</p></span>
+                      <span><p>Test notification4</p></span>
+                      <span><p>Test notification5</p></span>
+                      <span><p>Test notification6</p></span>
+                      <span><p>Test notification7</p></span>
+                      <span><p>Test notification8</p></span>
+                      <span><p>Test notification9</p></span>
+                      <span><p>Test notification10</p></span>
+                      <span><p>Test notification11</p></span>
+                    </div>
+                    <div class="seeAll"><a href="#">See All</a></div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </body>
 
 </html>
